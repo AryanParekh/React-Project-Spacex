@@ -46,25 +46,29 @@ class App extends Component{
           <Route exact path='/'>
             {/* start of date section */}
             <br/>
-              <div className='row'>
-                <center>
-                  <form name ='dateform' id='dateform' onSubmit={this.changeDate}>
+              <div className='datesection'>
+                <form name ='dateform' id='dateform' onSubmit={this.changeDate}>
+                  <center>
+                      <div>
                       <label for='startdate'>Start Date:</label>
-                      &nbsp;
                       <input value={this.state.startdate} id='startdate' name='startdate' type='date' style={date}></input>
-                      &emsp;&emsp;&emsp;
+                      </div>
+                      <div>
                       <label for='enddate'>End Date:</label>
-                      &nbsp;
                       <input value={this.state.enddate} id='enddate' name='enddate' type='date' style={date}></input>
-                      &emsp;&emsp;&emsp;
+                      </div>
+                      <div>
                       <Button type="submit" variant="primary" style={button}>Search</Button>
-                  </form>
-                </center>
+                      </div>
+                  </center>
+                </form>
               </div>
             <br/>
             {/* end of date section */}
             {/* switching between All cards and filtered Cards */}
-            {this.state.dateFilterApplied?<FilteredCards start={start} end={end}/>:<AllCards data={this.state.data}/>}
+            <div className='set'>
+              {this.state.dateFilterApplied?<FilteredCards start={start} end={end}/>:<AllCards data={this.state.data}/>}
+            </div>
           </Route>
           <Route path='/:id' component={CardDetails}/>
         </div>

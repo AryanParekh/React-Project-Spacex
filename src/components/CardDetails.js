@@ -66,6 +66,8 @@ export default class CardDetails extends React.Component {
 }
 
 let table ={
+    height:'100px',
+    width:'140px',
     color:'black',
     fontFamily: 'arial, sans-serif',
     borderCollapse: 'collapse',

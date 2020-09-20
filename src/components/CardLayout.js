@@ -28,7 +28,7 @@ export default function CardLayout(props){
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
     return (
-        <div className="col-12 col-md-6 col-xl-4 px-0">
+        <div className="col-12 col-md-6 col-xl-4 px-0 set">
             <div style={box}>
                 <Card className={classes.root}>
                     <CardContent>
